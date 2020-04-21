@@ -15,8 +15,21 @@ public class Controlleur {
 		}
 		
 		//creation des arcs
-		noeuds[0].setArc(new Arc(noeuds[1], 15));
-		noeuds[0].setArc(new Arc(noeuds[2], 5));
+		noeuds[noms.indexOf("a")].setArc(new Arc(noeuds[noms.indexOf("e")], 1));
+		noeuds[noms.indexOf("a")].setArc(new Arc(noeuds[noms.indexOf("c")], 6));
+		noeuds[noms.indexOf("a")].setArc(new Arc(noeuds[noms.indexOf("b")], 1));
+		noeuds[noms.indexOf("a")].setArc(new Arc(noeuds[noms.indexOf("h")], 2));
+		
+		noeuds[noms.indexOf("b")].setArc(new Arc(noeuds[noms.indexOf("f")], 1));
+		noeuds[noms.indexOf("b")].setArc(new Arc(noeuds[noms.indexOf("c")], 4));
+		noeuds[noms.indexOf("b")].setArc(new Arc(noeuds[noms.indexOf("d")], 1));
+
+		noeuds[noms.indexOf("d")].setArc(new Arc(noeuds[noms.indexOf("c")], 5));
+		noeuds[noms.indexOf("d")].setArc(new Arc(noeuds[noms.indexOf("f")], 2));
+		
+		noeuds[noms.indexOf("f")].setArc(new Arc(noeuds[noms.indexOf("g")], 2));
+		noeuds[noms.indexOf("h")].setArc(new Arc(noeuds[noms.indexOf("i")], 3));
+		noeuds[noms.indexOf("i")].setArc(new Arc(noeuds[noms.indexOf("j")], 4));
 		
 		// creation modele
 		Modele m = new Modele(noeuds);
